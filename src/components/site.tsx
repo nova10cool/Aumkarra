@@ -94,7 +94,7 @@ export function ImageScene({
 }: {
   src: string;
   children: ReactNode;
-  position?: string;
+  position?: string | undefined;
   align?: "center" | "left" | "right";
   tall?: boolean;
 }) {
