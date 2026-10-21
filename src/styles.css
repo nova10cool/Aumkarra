@@ -31,39 +31,42 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-candle: var(--candle);
-  --color-coral: var(--coral);
-  --color-leaf: var(--leaf);
-  --color-juniper: var(--juniper);
+  --color-ivory: var(--ivory);
+  --color-gold: var(--gold);
+  --color-olive: var(--olive);
+  --color-midnight: var(--midnight);
+  --color-night: var(--night);
 }
 
-/* Palette: Candle #EFE9D7, Coral #7D2826, Leaf #898861, Juniper #343723 */
 :root {
   --radius: 0.25rem;
-  --candle: oklch(0.932 0.026 92);
-  --coral: oklch(0.42 0.12 25);
-  --leaf: oklch(0.61 0.06 108);
-  --juniper: oklch(0.32 0.035 115);
+  /* Palette drawn from the artwork: midnight blue, olive, lamp gold, ivory */
+  --midnight: oklch(0.17 0.045 262);
+  --night: oklch(0.23 0.06 258);
+  --olive: oklch(0.6 0.09 115);
+  --gold: oklch(0.8 0.11 78);
+  --ivory: oklch(0.94 0.025 85);
 
-  --background: var(--candle);
-  --foreground: var(--juniper);
-  --card: oklch(0.955 0.02 92);
-  --card-foreground: var(--juniper);
-  --popover: var(--candle);
-  --popover-foreground: var(--juniper);
-  --primary: var(--coral);
-  --primary-foreground: var(--candle);
-  --secondary: var(--juniper);
-  --secondary-foreground: var(--candle);
-  --muted: oklch(0.9 0.03 95);
-  --muted-foreground: oklch(0.45 0.04 110);
-  --accent: var(--leaf);
-  --accent-foreground: var(--candle);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: var(--candle);
-  --border: oklch(0.82 0.04 100);
-  --input: oklch(0.82 0.04 100);
-  --ring: var(--leaf);
+  --background: var(--midnight);
+  --foreground: var(--ivory);
+  --card: var(--night);
+  --card-foreground: var(--ivory);
+  --popover: var(--night);
+  --popover-foreground: var(--ivory);
+  --primary: var(--gold);
+  --primary-foreground: var(--midnight);
+  --secondary: var(--olive);
+  --secondary-foreground: var(--midnight);
+  --muted: oklch(0.21 0.05 260);
+  --muted-foreground: oklch(0.78 0.03 90);
+  --accent: var(--olive);
+  --accent-foreground: var(--ivory);
+  --destructive: oklch(0.6 0.2 27);
+  --destructive-foreground: var(--ivory);
+  --border: oklch(0.6 0.09 115 / 25%);
+  --input: oklch(0.6 0.09 115 / 35%);
+  --ring: var(--gold);
+  --glow: radial-gradient(ellipse at 50% 30%, oklch(0.8 0.11 78 / 18%), transparent 60%);
 }
 
 @layer base {
@@ -108,4 +111,20 @@
     opacity: 1;
     transform: none;
   }
+}
+
+@utility glow-text {
+  text-shadow: 0 0 40px oklch(0.8 0.11 78 / 35%);
+}
+
+@utility ethereal {
+  background-image: var(--glow);
+}
+
+@keyframes drift {
+  from { transform: scale(1.08); }
+  to { transform: scale(1); }
+}
+@utility drift {
+  animation: drift 12s ease-out both;
 }

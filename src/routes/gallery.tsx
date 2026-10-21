@@ -3,7 +3,7 @@ import cover from "@/assets/cover.jpg.asset.json";
 import devi from "@/assets/devi.jpg.asset.json";
 import venkat from "@/assets/venkateswara.jpg.asset.json";
 import shiva from "@/assets/shiva-page.jpg.asset.json";
-import { PageIntro } from "@/components/site";
+import { ImageScene, Ornament } from "@/components/site";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -18,37 +18,30 @@ export const Route = createFileRoute("/gallery")({
 });
 
 const items = [
-  { src: venkat.url, name: "Sri Venkateswara", note: "The Lord of the Seven Hills, carved in warm stone — the cover of ’27.", cls: "md:col-span-2 aspect-square" },
-  { src: devi.url, name: "Devi with Kili", note: "The goddess and her green parrot, emblem of sweet speech and devotion.", cls: "aspect-[3/4]" },
-  { src: shiva.url, name: "Mahadeva", note: "Shiva in twilight stillness, opening the month of Margazhi – Thai.", cls: "aspect-[3/4] object-top" },
-  { src: cover.url, name: "The Cover", note: "Aumkarra ’27, as it will hang upon your wall.", cls: "md:col-span-2 aspect-[16/10]" },
+  { src: venkat.url, name: "Sri Venkateswara", note: "The Lord of the Seven Hills, carved in warm stone — the cover of ’27.", align: "left" as const, pos: "center 40%" },
+  { src: devi.url, name: "Devi with Kili", note: "The goddess and her green parrot, emblem of sweet speech and devotion.", align: "right" as const, pos: "70% 30%" },
+  { src: shiva.url, name: "Mahadeva", note: "Shiva in twilight stillness, opening the month of Margazhi – Thai.", align: "left" as const, pos: "center 15%" },
+  { src: cover.url, name: "The Cover", note: "Aumkarra ’27, as it will hang upon your wall.", align: "right" as const, pos: "center 45%" },
 ];
 
 function Gallery() {
   return (
     <>
-      <PageIntro
-        eyebrow="Darshan"
-        title="The sacred art"
-        text="Every month opens with a portrait chosen for its stillness — images to pause before, not simply pass by."
-      />
-      <section className="mx-auto grid max-w-6xl gap-8 px-6 pb-24 md:grid-cols-3">
-        {items.map((it) => (
-          <figure key={it.name} className={it.cls.includes("col-span") ? "md:col-span-2" : ""}>
-            <div className="overflow-hidden rounded-sm bg-juniper">
-              <img
-                src={it.src}
-                alt={it.name}
-                className={`w-full object-cover transition duration-1000 hover:scale-105 ${it.cls.replace("md:col-span-2", "")}`}
-              />
-            </div>
-            <figcaption className="mt-4">
-              <p className="font-display text-2xl">{it.name}</p>
-              <p className="mt-1 font-serif text-lg italic text-muted-foreground">{it.note}</p>
-            </figcaption>
-          </figure>
-        ))}
+      <section className="ethereal px-6 pb-16 pt-40 text-center">
+        <p className="eyebrow text-olive">Darshan</p>
+        <h1 className="mt-5 text-5xl glow-text md:text-7xl">The sacred art</h1>
+        <Ornament className="my-7" />
+        <p className="mx-auto max-w-2xl font-serif text-xl text-ivory/80">
+          Every month opens with a portrait chosen for its stillness — images to pause before, not simply pass by.
+        </p>
       </section>
+      {items.map((it, i) => (
+        <ImageScene key={it.name} src={it.src} align={it.align} position={it.pos}>
+          <p className="font-display text-6xl text-gold/70">{String(i + 1).padStart(2, "0")}</p>
+          <h2 className="mt-4 text-4xl glow-text md:text-6xl">{it.name}</h2>
+          <p className="mt-5 font-serif text-xl italic text-ivory/85">{it.note}</p>
+        </ImageScene>
+      ))}
     </>
   );
 }
