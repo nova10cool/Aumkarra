@@ -79,9 +79,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Aumkarra — Vedic Calendar" },
-      { name: "description", content: "Aumkarra Vedic Panchanga calendars." },
-      { name: "author", content: "Aumkarra" },
+      { title: "aumkarra — Vedic Calendar" },
+      { name: "description", content: "aumkarra Vedic Panchanga calendars." },
+      { name: "author", content: "aumkarra" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
           ],

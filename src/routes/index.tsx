@@ -8,9 +8,9 @@ import { ImageScene, Ornament } from "@/components/site";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Aumkarra — Vedic Calendar 2027" },
-      { name: "description", content: "Aumkarra's 2027 Vedic Panchanga calendar: sacred art, auspicious timings and festivals for every day of the year." },
-      { property: "og:title", content: "Aumkarra — Vedic Calendar 2027" },
+      { title: "aumkarra — Vedic Calendar 2027" },
+      { name: "description", content: "aumkarra's 2027 Vedic Panchanga calendar: sacred art, auspicious timings and festivals for every day of the year." },
+      { property: "og:title", content: "aumkarra — Vedic Calendar 2027" },
       { property: "og:description", content: "Sacred art and the Panchanga for every day of 2027." },
     ],
   }),
@@ -31,7 +31,7 @@ function Home() {
     <>
       <ImageScene src={venkat.url} tall position="center 40%">
         <p className="eyebrow text-olive">பஞ்சாங்க நாட்காட்டி · Vedic Calendar</p>
-        <h1 className="mt-6 text-6xl tracking-[0.25em] glow-text md:text-8xl">Aumkarra</h1>
+        <h1 className="mt-6 text-6xl tracking-[0.25em] glow-text md:text-8xl">aumkarra</h1>
         <p className="mt-3 font-display text-4xl text-gold">’27</p>
         <p className="mx-auto mt-8 max-w-md font-serif text-xl leading-relaxed text-ivory/85">
           A quiet companion for the year ahead — the rhythm of the Panchanga, held within twelve
@@ -77,7 +77,7 @@ function Home() {
 
       <section className="ethereal relative overflow-hidden py-28">
         <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 md:grid-cols-2">
-          <img src={cover.url} alt="Aumkarra 2027 calendar cover" className="w-full rounded-sm opacity-95 shadow-[0_0_80px_-10px] shadow-gold/30" />
+          <img src={cover.url} alt="aumkarra 2027 calendar cover" className="w-full rounded-sm opacity-95 shadow-[0_0_80px_-10px] shadow-gold/30" />
           <div>
             <h2 className="text-4xl glow-text md:text-5xl">Welcome the new year with grace</h2>
             <p className="mt-6 font-serif text-xl text-ivory/80">

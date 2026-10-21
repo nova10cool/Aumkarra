@@ -6,9 +6,9 @@ import { Ornament } from "@/components/site";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Orders — Aumkarra" },
-      { name: "description", content: "Order the Aumkarra 2027 Vedic Calendar or send us an enquiry for bulk and gifting orders." },
-      { property: "og:title", content: "Contact & Orders — Aumkarra" },
+      { title: "Contact & Orders — aumkarra" },
+      { name: "description", content: "Order the aumkarra 2027 Vedic Calendar or send us an enquiry for bulk and gifting orders." },
+      { property: "og:title", content: "Contact & Orders — aumkarra" },
       { property: "og:description", content: "Reserve your 2027 Vedic Calendar." },
     ],
   }),
@@ -27,7 +27,7 @@ function Contact() {
       <div className="relative mx-auto grid max-w-6xl gap-14 px-6 pb-24 pt-40 md:grid-cols-2">
         <div className="fade-up">
           <p className="eyebrow text-olive">Orders & enquiries</p>
-          <h1 className="mt-5 text-5xl glow-text md:text-6xl">Bring Aumkarra home</h1>
+          <h1 className="mt-5 text-5xl glow-text md:text-6xl">Bring aumkarra home</h1>
           <Ornament className="my-7 justify-start" />
           <p className="font-serif text-xl text-ivory/85">
             Tell us how many calendars you'd like — for your family, your temple, or as gifts — and we'll be in touch.

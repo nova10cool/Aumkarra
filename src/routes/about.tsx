@@ -6,9 +6,9 @@ import { ImageScene, PageHero, Ornament } from "@/components/site";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Aumkarra — Our Story" },
-      { name: "description", content: "Aumkarra creates devotional Vedic calendars that carry tradition into the modern home." },
-      { property: "og:title", content: "About Aumkarra — Our Story" },
+      { title: "About aumkarra — Our Story" },
+      { name: "description", content: "aumkarra creates devotional Vedic calendars that carry tradition into the modern home." },
+      { property: "og:title", content: "About aumkarra — Our Story" },
       { property: "og:description", content: "Carrying the Panchanga into the modern home with reverence." },
     ],
   }),
@@ -25,12 +25,12 @@ function About() {
   return (
     <>
       <PageHero src={venkat.url} position="center 40%" eyebrow="Our story" title="Named for the primordial sound"
-        text="Aumkarra takes its name from Om — the first vibration, from which all time unfolds." />
+        text="aumkarra takes its name from Om — the first vibration, from which all time unfolds." />
       <ImageScene src={devi.url} align="left" position="70% 30%">
         <div className="space-y-6 font-serif text-xl leading-relaxed text-ivory/85">
           <p>
             For generations, families have looked to the Panchanga to know when to begin, when to
-            rest and when to pray. Aumkarra was born from a simple wish: to keep that wisdom close,
+            rest and when to pray. aumkarra was born from a simple wish: to keep that wisdom close,
             in a form as beautiful as it is useful.
           </p>
           <p>
