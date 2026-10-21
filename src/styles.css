@@ -128,3 +128,12 @@
 @utility drift {
   animation: drift 12s ease-out both;
 }
+
+@keyframes spin3d {
+  0% { transform: rotateX(8deg) rotateY(0deg); }
+  50% { transform: rotateX(-6deg) rotateY(180deg); }
+  100% { transform: rotateX(8deg) rotateY(360deg); }
+}
+@utility spin3d {
+  animation: spin3d 14s linear infinite;
+}

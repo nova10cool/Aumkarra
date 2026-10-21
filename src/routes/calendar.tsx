@@ -17,6 +17,7 @@ export const Route = createFileRoute("/calendar")({
 });
 
 const specs = [
+  ["Price", "RM 19"],
   ["Format", "Spiral-bound wall calendar"],
   ["Languages", "Tamil & English"],
   ["Pages", "Cover + 12 monthly spreads"],

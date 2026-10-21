@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import cover from "@/assets/cover.jpg.asset.json";
+import coverPage from "@/assets/cover-page.jpg.asset.json";
 import devi from "@/assets/devi.jpg.asset.json";
 import venkat from "@/assets/venkateswara.jpg.asset.json";
 import shiva from "@/assets/shiva-page.jpg.asset.json";
@@ -77,12 +77,20 @@ function Home() {
 
       <section className="ethereal relative overflow-hidden py-28">
         <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 md:grid-cols-2">
-          <img src={cover.url} alt="aumkarra 2027 calendar cover" className="w-full rounded-sm opacity-95 shadow-[0_0_80px_-10px] shadow-gold/30" />
+          <div className="flex justify-center [perspective:1400px]">
+            <div className="spin3d relative aspect-square w-72 [transform-style:preserve-3d] md:w-96">
+              <img src={coverPage.url} alt="aumkarra 2027 calendar cover" className="absolute inset-0 h-full w-full rounded-sm shadow-[0_0_80px_-10px] shadow-gold/40 [backface-visibility:hidden]" />
+              <div className="absolute inset-0 rounded-sm bg-night [backface-visibility:hidden] [transform:rotateY(180deg)] flex items-center justify-center">
+                <span className="font-display text-5xl tracking-[0.3em] text-gold glow-text">aumkarra</span>
+              </div>
+            </div>
+          </div>
           <div>
             <h2 className="text-4xl glow-text md:text-5xl">Welcome the new year with grace</h2>
             <p className="mt-6 font-serif text-xl text-ivory/80">
               For your home, your pooja room, or as a blessing for family and friends.
             </p>
+            <p className="mt-6 font-display text-5xl text-gold">RM 19</p>
             <Link to="/contact" className={`${btn} mt-8 inline-block bg-olive text-ivory hover:opacity-90`}>Reserve your 2027 calendar</Link>
           </div>
         </div>
