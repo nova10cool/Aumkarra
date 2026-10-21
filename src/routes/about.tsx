@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import venkat from "@/assets/venkateswara.jpg.asset.json";
-import { PageIntro, Ornament } from "@/components/site";
+import devi from "@/assets/devi.jpg.asset.json";
+import { ImageScene, PageHero, Ornament } from "@/components/site";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -23,14 +24,10 @@ const values = [
 function About() {
   return (
     <>
-      <PageIntro
-        eyebrow="Our story"
-        title="Named for the primordial sound"
-        text="Aumkarra takes its name from Om — the first vibration, from which all time unfolds."
-      />
-      <section className="mx-auto grid max-w-6xl items-center gap-14 px-6 pb-24 md:grid-cols-2">
-        <img src={venkat.url} alt="Sri Venkateswara carving" className="aspect-square w-full rounded-sm object-cover" />
-        <div className="space-y-6 font-serif text-xl leading-relaxed text-muted-foreground">
+      <PageHero src={venkat.url} position="center 40%" eyebrow="Our story" title="Named for the primordial sound"
+        text="Aumkarra takes its name from Om — the first vibration, from which all time unfolds." />
+      <ImageScene src={devi.url} align="left" position="70% 30%">
+        <div className="space-y-6 font-serif text-xl leading-relaxed text-ivory/85">
           <p>
             For generations, families have looked to the Panchanga to know when to begin, when to
             rest and when to pray. Aumkarra was born from a simple wish: to keep that wisdom close,
@@ -38,18 +35,17 @@ function About() {
           </p>
           <p>
             Created in association with JoeVastu Consulting, our calendar pairs careful astrological
-            detail with devotional art — a piece that belongs as much in the pooja room as in the
-            kitchen or office.
+            detail with devotional art — a piece that belongs as much in the pooja room as anywhere in the home.
           </p>
         </div>
-      </section>
-      <section className="bg-muted/60 py-24">
+      </ImageScene>
+      <section className="ethereal py-24">
         <Ornament />
         <div className="mx-auto mt-12 grid max-w-5xl gap-12 px-6 text-center md:grid-cols-3">
           {values.map((v) => (
             <div key={v.t}>
-              <h3 className="text-3xl text-primary">{v.t}</h3>
-              <p className="mt-3 font-serif text-lg text-muted-foreground">{v.d}</p>
+              <h3 className="text-3xl text-gold glow-text">{v.t}</h3>
+              <p className="mt-3 font-serif text-lg text-ivory/75">{v.d}</p>
             </div>
           ))}
         </div>
