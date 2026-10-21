@@ -88,7 +88,7 @@ export function Ornament({ className = "" }: { className?: string }) {
 export function ImageScene({
   src,
   children,
-  position = "center",
+  position,
   align = "center",
   tall = false,
 }: {
@@ -107,7 +107,7 @@ export function ImageScene({
   const justify = align === "left" ? "justify-start" : align === "right" ? "justify-end" : "justify-center text-center";
   return (
     <section className={`relative flex items-center overflow-hidden ${tall ? "min-h-screen" : "min-h-[85vh]"}`}>
-      <img src={src} alt="" className="drift absolute inset-0 h-full w-full object-cover" style={{ objectPosition: position }} />
+      <img src={src} alt="" className="drift absolute inset-0 h-full w-full object-cover" style={{ objectPosition: position ?? "center" }} />
       <div className={`absolute inset-0 ${side}`} />
       <div className="absolute inset-0 bg-gradient-to-b from-midnight/70 via-transparent to-midnight" />
       <div className={`relative mx-auto flex w-full max-w-6xl px-6 py-32 ${justify}`}>
