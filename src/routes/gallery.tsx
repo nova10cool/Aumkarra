@@ -8,9 +8,9 @@ import { ImageScene, Ornament } from "@/components/site";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — Sacred Art of Aumkarra" },
-      { name: "description", content: "The devotional portraits gracing the pages of the Aumkarra 2027 Vedic Calendar." },
-      { property: "og:title", content: "Gallery — Sacred Art of Aumkarra" },
+      { title: "Gallery — Sacred Art of aumkarra" },
+      { name: "description", content: "The devotional portraits gracing the pages of the aumkarra 2027 Vedic Calendar." },
+      { property: "og:title", content: "Gallery — Sacred Art of aumkarra" },
       { property: "og:description", content: "Devi, Venkateswara, Shiva and more, in warm temple light." },
     ],
   }),
@@ -21,7 +21,7 @@ const items = [
   { src: venkat.url, name: "Sri Venkateswara", note: "The Lord of the Seven Hills, carved in warm stone — the cover of ’27.", align: "left" as const, pos: "center 40%" },
   { src: devi.url, name: "Devi with Kili", note: "The goddess and her green parrot, emblem of sweet speech and devotion.", align: "right" as const, pos: "70% 30%" },
   { src: shiva.url, name: "Mahadeva", note: "Shiva in twilight stillness, opening the month of Margazhi – Thai.", align: "left" as const, pos: "center 15%" },
-  { src: cover.url, name: "The Cover", note: "Aumkarra ’27, as it will hang upon your wall.", align: "right" as const, pos: "center 45%" },
+  { src: cover.url, name: "The Cover", note: "aumkarra ’27, as it will hang upon your wall.", align: "right" as const, pos: "center 45%" },
 ];
 
 function Gallery() {

@@ -7,9 +7,9 @@ import { ImageScene, PageHero } from "@/components/site";
 export const Route = createFileRoute("/calendar")({
   head: () => ({
     meta: [
-      { title: "The 2027 Vedic Calendar — Aumkarra" },
-      { name: "description", content: "Inside the Aumkarra 2027 Panchanga wall calendar: daily tithi, nakshatra, Rahu Kalam and festivals in Tamil and English." },
-      { property: "og:title", content: "The 2027 Vedic Calendar — Aumkarra" },
+      { title: "The 2027 Vedic Calendar — aumkarra" },
+      { name: "description", content: "Inside the aumkarra 2027 Panchanga wall calendar: daily tithi, nakshatra, Rahu Kalam and festivals in Tamil and English." },
+      { property: "og:title", content: "The 2027 Vedic Calendar — aumkarra" },
       { property: "og:description", content: "Daily Panchanga, auspicious timings and sacred art for 2027." },
     ],
   }),
@@ -17,6 +17,7 @@ export const Route = createFileRoute("/calendar")({
 });
 
 const specs = [
+  ["Price", "RM 19"],
   ["Format", "Spiral-bound wall calendar"],
   ["Languages", "Tamil & English"],
   ["Pages", "Cover + 12 monthly spreads"],
@@ -31,7 +32,7 @@ function CalendarPage() {
   return (
     <>
       <PageHero src={cover.url} position="center 45%" eyebrow="Vedic Calendar · ’27" title="A year, in quiet order"
-        text="The Aumkarra calendar brings the traditional Panchanga onto your wall — clear, beautiful and easy to read at a glance." />
+        text="The aumkarra calendar brings the traditional Panchanga onto your wall — clear, beautiful and easy to read at a glance." />
 
       <ImageScene src={venkat.url} align="right">
         <h2 className="text-4xl glow-text">Details</h2>

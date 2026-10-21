@@ -16,7 +16,7 @@ export function SiteHeader() {
     <header className="fixed inset-x-0 top-0 z-40 bg-gradient-to-b from-midnight/90 to-transparent">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <Link to="/" className="font-display text-2xl tracking-[0.35em] text-ivory glow-text">
-          Aumkarra
+          aumkarra
         </Link>
         <nav className="hidden gap-8 md:flex">
           {nav.map((n) => (
@@ -53,7 +53,7 @@ export function SiteFooter() {
     <footer className="border-t border-border bg-midnight ethereal">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-3">
         <div>
-          <p className="font-display text-3xl tracking-[0.35em] glow-text">Aumkarra</p>
+          <p className="font-display text-3xl tracking-[0.35em] glow-text">aumkarra</p>
           <p className="mt-4 font-serif text-lg italic text-ivory/60">Time, held with reverence.</p>
         </div>
         <div className="flex flex-col gap-3">
@@ -67,7 +67,7 @@ export function SiteFooter() {
         <div>
           <p className="eyebrow text-olive">In association with</p>
           <p className="mt-3 text-sm text-ivory/70">JoeVastu Consulting</p>
-          <p className="mt-6 text-xs text-ivory/40">© {new Date().getFullYear()} Aumkarra. All rights reserved.</p>
+          <p className="mt-6 text-xs text-ivory/40">© {new Date().getFullYear()} aumkarra. All rights reserved.</p>
         </div>
       </div>
     </footer>
