@@ -1,0 +1,3 @@
+- [ ] Simplify the five pages and navigation.
+- [ ] Add interactive calendar front and uploaded back.
+- [ ] Verify page navigation and calendar on desktop and mobile.

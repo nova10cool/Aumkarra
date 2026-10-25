@@ -137,3 +137,14 @@
 @utility spin3d {
   animation: spin3d 14s linear infinite;
 }
+
+.calendar-stage { height: 460px; }
+.calendar-stage canvas { display: block; width: 100%; height: 100%; }
+.landing-scene { min-height: calc(100svh - 80px); }
+@media (max-width: 767px) {
+  .calendar-stage { height: 350px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .drift, .fade-up, .spin3d { animation: none; }
+}
