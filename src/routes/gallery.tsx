@@ -32,7 +32,7 @@ function Upcoming() {
           <img
             src={vedaLife}
             alt="Veda Life agarbatti tube standing beside its cap, lit by an oil lamp"
-            className="relative mx-auto w-full max-w-xs [mask-image:radial-gradient(ellipse_72%_68%_at_50%_50%,black_50%,transparent_92%)] md:max-w-sm"
+            className="relative mx-auto w-full max-w-xs [mask-image:radial-gradient(ellipse_88%_82%_at_50%_50%,black_18%,transparent_100%)] md:max-w-sm"
           />
         </div>
         <div className="text-center md:text-left">
