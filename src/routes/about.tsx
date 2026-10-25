@@ -1,55 +1,48 @@
-import { createFileRoute } from "@tanstack/react-router";
-import venkat from "@/assets/venkateswara.jpg.asset.json";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import shiva from "@/assets/shiva-page.jpg.asset.json";
 import devi from "@/assets/devi.jpg.asset.json";
-import { ImageScene, PageHero, Ornament } from "@/components/site";
+import { ImageScene, Ornament } from "@/components/site";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About aumkarra — Our Story" },
-      { name: "description", content: "aumkarra creates devotional Vedic calendars that carry tradition into the modern home." },
-      { property: "og:title", content: "About aumkarra — Our Story" },
-      { property: "og:description", content: "Carrying the Panchanga into the modern home with reverence." },
-    ],
-  }),
+  head: () => ({ meta: [
+    { title: "About the Calendar — aumkarra" },
+    { name: "description", content: "Explore the twelve Tamil months, daily Panchanga and devotional artwork inside the aumkarra calendar." },
+    { property: "og:title", content: "About the Calendar — aumkarra" },
+    { property: "og:description", content: "Explore the twelve Tamil months, daily Panchanga and devotional artwork inside the aumkarra calendar." },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" },
+  ] }),
   component: About,
 });
 
-const values = [
-  { t: "Reverence", d: "Every image and every date is treated as something sacred." },
-  { t: "Clarity", d: "Traditional knowledge, laid out so anyone can read it." },
-  { t: "Craft", d: "Printed and bound with care, made to last the whole year." },
-];
+const months = ["Chithirai", "Vaikasi", "Aani", "Aadi", "Aavani", "Purattasi", "Aippasi", "Karthigai", "Margazhi", "Thai", "Maasi", "Panguni"];
 
 function About() {
-  return (
-    <>
-      <PageHero src={venkat.url} position="center 40%" eyebrow="Our story" title="Named for the primordial sound"
-        text="aumkarra takes its name from Om — the first vibration, from which all time unfolds." />
-      <ImageScene src={devi.url} align="left" position="70% 30%">
-        <div className="space-y-6 font-serif text-xl leading-relaxed text-ivory/85">
-          <p>
-            For generations, families have looked to the Panchanga to know when to begin, when to
-            rest and when to pray. aumkarra was born from a simple wish: to keep that wisdom close,
-            in a form as beautiful as it is useful.
-          </p>
-          <p>
-            Created in association with JoeVastu Consulting, our calendar pairs careful astrological
-            detail with devotional art — a piece that belongs as much in the pooja room as anywhere in the home.
-          </p>
+  return <>
+    <ImageScene src={shiva.url} align="left" position="center 15%">
+      <p className="eyebrow text-olive">About the calendar</p>
+      <h1 className="mt-5 text-5xl glow-text md:text-6xl">A rhythm for every day</h1>
+      <p className="mt-7 font-serif text-xl leading-relaxed text-ivory/85">The 2027 aumkarra calendar brings together the traditional Panchanga and devotional art. Tamil and English sit side by side, keeping the year close to its roots.</p>
+      <p className="mt-5 font-serif text-xl leading-relaxed text-ivory/75">Daily tithi and nakshatra, Rahu Kalam, Yamagandam and Gulikai accompany festivals and observances throughout the year.</p>
+    </ImageScene>
+    <section className="ethereal px-6 py-20">
+      <div className="mx-auto max-w-5xl text-center">
+        <p className="eyebrow text-olive">The Tamil year</p>
+        <h2 className="mt-4 text-4xl glow-text">Twelve sacred months</h2>
+        <Ornament className="my-8" />
+        <div className="grid grid-cols-2 gap-x-6 gap-y-7 sm:grid-cols-3 md:grid-cols-6">
+          {months.map((month, i) => <div key={month} className="border-t border-border pt-4"><span className="eyebrow text-gold/70">{String(i + 1).padStart(2, "0")}</span><p className="mt-2 font-serif text-xl">{month}</p></div>)}
         </div>
-      </ImageScene>
-      <section className="ethereal py-24">
-        <Ornament />
-        <div className="mx-auto mt-12 grid max-w-5xl gap-12 px-6 text-center md:grid-cols-3">
-          {values.map((v) => (
-            <div key={v.t}>
-              <h3 className="text-3xl text-gold glow-text">{v.t}</h3>
-              <p className="mt-3 font-serif text-lg text-ivory/75">{v.d}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-    </>
-  );
+      </div>
+    </section>
+    <ImageScene src={devi.url} align="left" position="70% 30%">
+      <p className="eyebrow text-olive">Art within the pages</p>
+      <h2 className="mt-5 text-4xl glow-text md:text-5xl">A moment of devotion</h2>
+      <p className="mt-7 font-serif text-xl leading-relaxed text-ivory/85">Shiva in stillness. Devi with her green parrot. Devotional portraits bring warmth to the months, inviting a quiet pause each time you turn the page.</p>
+      <p className="mt-5 font-serif text-xl leading-relaxed text-ivory/75">Sacred imagery and the day's details share one place — for your home, your pooja room, or a thoughtful gift.</p>
+      <Button asChild variant="link" className="mt-8 px-0 eyebrow"><Link to="/gallery">More from aumkarra <ArrowRight /></Link></Button>
+    </ImageScene>
+  </>;
 }
