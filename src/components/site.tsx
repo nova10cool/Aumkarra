@@ -1,12 +1,13 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const nav = [
   { to: "/", label: "Home" },
   { to: "/calendar", label: "The Calendar" },
-  { to: "/gallery", label: "Gallery" },
-  { to: "/about", label: "About" },
+  { to: "/about", label: "About the Calendar" },
+  { to: "/gallery", label: "Coming Soon" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -31,9 +32,9 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <button className="text-ivory md:hidden" onClick={() => setOpen(!open)} aria-label="Menu">
+        <Button variant="ghost" size="icon" className="text-ivory md:hidden" onClick={() => setOpen(!open)} aria-label="Menu" aria-expanded={open}>
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        </Button>
       </div>
       {open && (
         <nav className="flex flex-col gap-4 bg-midnight/95 px-6 py-5 md:hidden">
@@ -49,25 +50,17 @@ export function SiteHeader() {
 }
 
 export function SiteFooter() {
+  const { pathname } = useLocation();
+  if (pathname === "/") return <footer className="flex h-20 items-center justify-center border-t border-border bg-midnight"><p className="text-xs text-ivory/40">© {new Date().getFullYear()} aumkarra</p></footer>;
   return (
     <footer className="border-t border-border bg-midnight ethereal">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-3">
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-6 px-6 py-8">
         <div>
-          <p className="font-display text-3xl tracking-[0.35em] glow-text">aumkarra</p>
-          <p className="mt-4 font-serif text-lg italic text-ivory/60">Time, held with reverence.</p>
-        </div>
-        <div className="flex flex-col gap-3">
-          <p className="eyebrow text-olive">Explore</p>
-          {nav.map((n) => (
-            <Link key={n.to} to={n.to} className="text-sm text-ivory/70 hover:text-gold">
-              {n.label}
-            </Link>
-          ))}
+          <Link to="/" className="font-display text-2xl glow-text">aumkarra</Link>
         </div>
         <div>
-          <p className="eyebrow text-olive">In association with</p>
-          <p className="mt-3 text-sm text-ivory/70">JoeVastu Consulting</p>
-          <p className="mt-6 text-xs text-ivory/40">© {new Date().getFullYear()} aumkarra. All rights reserved.</p>
+          <p className="text-sm text-ivory/60">In association with JoeVastu Consulting</p>
+          <p className="mt-2 text-xs text-ivory/40">© {new Date().getFullYear()} aumkarra. All rights reserved.</p>
         </div>
       </div>
     </footer>
