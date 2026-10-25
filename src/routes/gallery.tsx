@@ -25,14 +25,14 @@ function Upcoming() {
       <p className="mt-7 font-serif text-xl leading-relaxed text-ivory/80">New creations. The same reverence.</p>
     </ImageScene>
 
-    <section className="ethereal border-t border-border px-6 py-24 md:py-32">
+    <section className="ethereal overflow-hidden border-t border-border px-6 py-24 md:py-32">
       <div className="mx-auto grid w-full max-w-5xl items-center gap-14 md:grid-cols-2 md:gap-20">
         <div className="relative">
           <div className="absolute -inset-10 ethereal" aria-hidden="true" />
           <img
             src={vedaLife}
             alt="Veda Life agarbatti tube standing beside its cap, lit by an oil lamp"
-            className="relative mx-auto w-full max-w-xs rounded-sm ring-1 ring-gold/15 [mask-image:linear-gradient(to_bottom,transparent,black_12%,black_88%,transparent)] md:max-w-sm"
+            className="relative mx-auto w-full max-w-xs [mask-image:radial-gradient(ellipse_72%_68%_at_50%_50%,black_50%,transparent_92%)] md:max-w-sm"
           />
         </div>
         <div className="text-center md:text-left">
