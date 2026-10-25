@@ -1,0 +1,4 @@
+- [x] Simplify the five pages and navigation.
+- [x] Add interactive calendar front and uploaded back.
+- [x] Verify page navigation and calendar on desktop and mobile.
+- [ ] Activate WhatsApp contact button — waiting for the user's number.
