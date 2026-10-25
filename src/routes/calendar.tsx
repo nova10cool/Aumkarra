@@ -16,8 +16,8 @@ export const Route = createFileRoute("/calendar")({
 });
 
 function CalendarPage() {
-  return <section className="ethereal min-h-[calc(100svh-80px)] px-6 pb-16 pt-28 md:pt-36">
-    <div className="mx-auto grid max-w-5xl items-center gap-8 md:grid-cols-2 md:gap-16">
+  return <section className="ethereal flex min-h-[calc(100svh-80px)] items-center px-6 pb-16 pt-28 md:pt-36">
+    <div className="mx-auto grid w-full max-w-5xl items-center gap-8 md:grid-cols-2 md:gap-16">
       <CalendarModel />
       <div className="text-center md:text-left">
         <p className="eyebrow text-olive">Vedic wall calendar · 2027</p>

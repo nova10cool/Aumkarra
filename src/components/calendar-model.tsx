@@ -36,7 +36,7 @@ export function CalendarModel() {
       if (swatch) {
         swatch.fillStyle = token;
         swatch.fillRect(0, 0, 1, 1);
-        const [r, g, b] = swatch.getImageData(0, 0, 1, 1).data;
+        const [r = 0, g = 0, b = 0] = swatch.getImageData(0, 0, 1, 1).data;
         edgeColor = new THREE.Color(r / 255, g / 255, b / 255);
       }
       const edge = new THREE.MeshBasicMaterial({ color: edgeColor });
