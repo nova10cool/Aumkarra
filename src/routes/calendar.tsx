@@ -22,7 +22,7 @@ function CalendarPage() {
       <div className="text-center md:text-left">
         <p className="eyebrow text-olive">Vedic wall calendar · 2027</p>
         <h1 className="mt-5 text-5xl glow-text md:text-6xl">aumkarra ’27</h1>
-        <p className="mt-6 max-w-md font-serif text-xl leading-relaxed text-ivory/80">A year of sacred art and daily Panchanga, in Tamil and English — a quiet companion for your home.</p>
+        <p className="mt-6 max-w-md font-serif text-xl leading-relaxed text-ivory/80">A year of sacred art and daily Panchanga, in Tamil and English — a divine companion for your home and work.</p>
         <p className="mt-7 font-display text-5xl text-gold">RM 19</p>
         <Button asChild variant="link" className="mt-6 px-0 eyebrow"><Link to="/about">About the calendar <ArrowRight /></Link></Button>
       </div>
