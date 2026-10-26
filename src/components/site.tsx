@@ -1,6 +1,6 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
-import { ArrowRight, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const nav = [
@@ -35,9 +35,26 @@ export function SiteHeader() {
           ))}
       </nav>
       {landing && (
-        <Button asChild className="eyebrow hidden h-9 shrink-0 rounded-sm px-4 text-[10px] lg:inline-flex">
-          <Link to="/calendar">Experience the Sacred <ArrowRight /></Link>
-        </Button>
+        <Link to="/calendar" aria-label="Experience the Sacred" className="mandala-btn group fade-up hidden lg:inline-flex">
+          <svg className="mandala-ring" viewBox="0 0 120 120" aria-hidden="true" fill="none">
+            <circle cx="60" cy="60" r="57" stroke="currentColor" strokeWidth="1" opacity="0.4" />
+            <circle cx="60" cy="60" r="50" stroke="currentColor" strokeWidth="0.75" strokeDasharray="3 5" opacity="0.65" />
+            <circle cx="60" cy="60" r="26" stroke="currentColor" strokeWidth="0.75" opacity="0.55" />
+            {Array.from({ length: 12 }).map((_, i) => (
+              <path
+                key={i}
+                d="M60 5 C65 16 65 24 60 30 C55 24 55 16 60 5 Z"
+                stroke="currentColor"
+                strokeWidth="0.9"
+                opacity="0.75"
+                transform={`rotate(${i * 30} 60 60)`}
+              />
+            ))}
+          </svg>
+          <span className="eyebrow relative text-center text-[10px] leading-relaxed text-gold transition-colors group-hover:text-ivory">
+            Experience<br />the Sacred
+          </span>
+        </Link>
       )}
       <Button variant="ghost" size="icon" className="text-ivory md:hidden" onClick={() => setOpen(!open)} aria-label="Menu" aria-expanded={open}>
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
