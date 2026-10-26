@@ -21,7 +21,7 @@ export function SiteHeader() {
         <Link to="/" className="font-display text-2xl tracking-[0.35em] text-ivory glow-text">
           aumkarra
         </Link>
-        <nav className="hidden gap-8 md:flex">
+        <nav className="hidden gap-6 md:flex xl:gap-8">
           {nav.map((n) => (
             <Link
               key={n.to}
@@ -35,7 +35,7 @@ export function SiteHeader() {
           ))}
       </nav>
       {landing && (
-        <Button asChild size="lg" className="eyebrow hidden h-11 shrink-0 rounded-sm md:inline-flex">
+        <Button asChild className="eyebrow hidden h-9 shrink-0 rounded-sm px-4 text-[10px] lg:inline-flex">
           <Link to="/calendar">Experience the Sacred <ArrowRight /></Link>
         </Button>
       )}
