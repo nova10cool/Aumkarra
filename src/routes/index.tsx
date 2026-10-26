@@ -20,9 +20,7 @@ function Home() {
     <img src={venkat.url} alt="Sri Venkateswara in warm temple light" className="drift absolute inset-0 h-full w-full object-cover object-[center_40%]" />
     <div className="absolute inset-0 bg-midnight/45" />
     <div className="absolute inset-0 bg-gradient-to-b from-midnight/30 via-transparent to-midnight" />
-    <div className="fade-up relative lg:hidden">
-      <h1 className="text-6xl glow-text sm:text-8xl">aumkarra</h1>
-    </div>
+    <h1 className="sr-only">aumkarra</h1>
     <Button asChild size="lg" className="fade-up absolute bottom-12 left-1/2 h-12 -translate-x-1/2 rounded-sm eyebrow lg:hidden">
       <Link to="/calendar">Experience the Sacred <ArrowRight /></Link>
     </Button>
