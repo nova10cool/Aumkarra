@@ -21,7 +21,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 const products = [
-  { value: "calendar", label: "aumkarra Vedic Calendar 2027" },
+  { value: "calendar", label: "aumkarra VEDIC CALENDAR 2027" },
   { value: "veda-life", label: "Veda Life Agarbhati" },
 ];
 
