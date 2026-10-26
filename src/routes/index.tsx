@@ -22,7 +22,9 @@ function Home() {
     <div className="absolute inset-0 bg-gradient-to-b from-midnight/30 via-transparent to-midnight" />
     <div className="fade-up relative">
       <h1 className="text-6xl glow-text sm:text-8xl">aumkarra</h1>
-      <Button asChild size="lg" className="mt-10 h-12 rounded-sm eyebrow"><Link to="/calendar">The calendar <ArrowRight /></Link></Button>
     </div>
+    <Button asChild size="lg" className="fade-up absolute bottom-12 left-1/2 h-12 -translate-x-1/2 rounded-sm eyebrow">
+      <Link to="/calendar">Experience the Sacred <ArrowRight /></Link>
+    </Button>
   </section>;
 }
