@@ -3,6 +3,7 @@
 - [x] Verify page navigation and calendar on desktop and mobile.
 - [x] Add Veda Life agarbatti to the Coming Soon page.
 - [x] Landing button: "Experience the Sacred", pinned to bottom of the scene.
+- [x] Landing desktop: no centered title, button in the top-right of the header.
 - [x] Contact page: product selector + email + message enquiry form.
 - [ ] Wire the enquiry form to actually send (needs an inbox/email service).
 - [ ] Activate WhatsApp contact button — waiting for the user's number.
