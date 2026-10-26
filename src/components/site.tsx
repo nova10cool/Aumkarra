@@ -1,6 +1,6 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
-import { Menu, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const nav = [
@@ -13,9 +13,11 @@ const nav = [
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+  const landing = pathname === "/";
   return (
     <header className="fixed inset-x-0 top-0 z-40 bg-gradient-to-b from-midnight/90 to-transparent">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-5">
         <Link to="/" className="font-display text-2xl tracking-[0.35em] text-ivory glow-text">
           aumkarra
         </Link>
@@ -31,8 +33,13 @@ export function SiteHeader() {
               {n.label}
             </Link>
           ))}
-        </nav>
-        <Button variant="ghost" size="icon" className="text-ivory md:hidden" onClick={() => setOpen(!open)} aria-label="Menu" aria-expanded={open}>
+      </nav>
+      {landing && (
+        <Button asChild size="lg" className="eyebrow hidden h-11 shrink-0 rounded-sm md:inline-flex">
+          <Link to="/calendar">Experience the Sacred <ArrowRight /></Link>
+        </Button>
+      )}
+      <Button variant="ghost" size="icon" className="text-ivory md:hidden" onClick={() => setOpen(!open)} aria-label="Menu" aria-expanded={open}>
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </Button>
       </div>
