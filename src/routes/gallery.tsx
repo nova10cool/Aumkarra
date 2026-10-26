@@ -7,9 +7,9 @@ import { ImageScene } from "@/components/site";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({ meta: [
-    { title: "Coming Soon — Veda Life Agarbatti · aumkarra" },
+    { title: "Coming Soon — Veda Life Agarbhati · aumkarra" },
     { name: "description", content: "Something sacred is about to rise. Veda Life, an exquisite fragrance of the divine, and more creations from aumkarra." },
-    { property: "og:title", content: "Coming Soon — Veda Life Agarbatti · aumkarra" },
+    { property: "og:title", content: "Coming Soon — Veda Life Agarbhati · aumkarra" },
     { property: "og:description", content: "Something sacred is about to rise. Veda Life, an exquisite fragrance of the divine, and more creations from aumkarra." },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },
@@ -29,7 +29,7 @@ function Upcoming() {
       <div className="mx-auto grid w-full max-w-5xl items-center gap-14 md:grid-cols-2 md:gap-20">
         <img
           src={vedaLife}
-          alt="Veda Life agarbatti tube standing beside its cap, lit by an oil lamp"
+          alt="Veda Life agarbhati tube standing beside its cap, lit by an oil lamp"
           className="mx-auto w-full max-w-xs md:max-w-sm"
         />
         <div className="ethereal text-center md:text-left">
@@ -37,7 +37,7 @@ function Upcoming() {
           <h2 className="mt-5 font-display text-6xl leading-none glow-text md:text-7xl">Veda Life</h2>
           <span className="mx-auto mt-7 block h-px w-24 bg-gradient-to-r from-transparent via-gold/70 to-transparent md:mx-0" />
           <p className="mt-7 font-serif text-2xl leading-relaxed text-ivory/85">An exquisite fragrance of the divine.</p>
-          <p className="mt-5 font-serif text-lg leading-relaxed text-ivory/60">Vedic sandal agarbatti, handcrafted with all-natural ingredients — for your pooja room, or your desk.</p>
+          <p className="mt-5 font-serif text-lg leading-relaxed text-ivory/60">Vedic sandal agarbhati, handcrafted with all-natural ingredients — for your pooja room, or your desk.</p>
           <Button asChild variant="link" className="mt-8 px-0 eyebrow"><Link to="/contact">Enquire <ArrowRight /></Link></Button>
         </div>
       </div>
