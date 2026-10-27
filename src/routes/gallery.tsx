@@ -41,6 +41,7 @@ function Upcoming() {
           <p className="mt-5 font-serif text-lg leading-relaxed text-ivory/60">Vedic sandal agarbhati, handcrafted with all-natural ingredients — for your pooja room, or your desk.</p>
           <Button asChild variant="link" className="mt-8 px-0 eyebrow"><Link to="/contact">Enquire <ArrowRight /></Link></Button>
         </div>
+        </div>
       </div>
     </section>
   </>;
