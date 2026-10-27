@@ -11,3 +11,4 @@
 
 - Keep the five showcase pages at their existing public URLs; `/gallery` now presents upcoming products to preserve published links.
 - Initialize the Three.js calendar in a browser effect and dispose its rendering resources on unmount; this keeps SSR safe and navigation lightweight.
+- Reuse the shared MandalaEnter link for desktop and smaller-screen landing entrances so artwork and destination stay consistent.

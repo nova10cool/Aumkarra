@@ -39,7 +39,7 @@ function Contact() {
   return <section className="ethereal flex min-h-[calc(100svh-80px)] items-center justify-center px-6 pb-20 pt-32">
     <div className="w-full max-w-xl fade-up text-center">
       <p className="eyebrow text-olive">aumkarra</p>
-      <h1 className="mt-5 text-5xl glow-text md:text-7xl">Contact us</h1>
+      <h1 className="mt-5 text-5xl glow-text md:text-7xl">contact us</h1>
       <Ornament className="my-8" />
 
       {sent ? (

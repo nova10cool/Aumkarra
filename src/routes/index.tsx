@@ -1,7 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import venkat from "@/assets/venkateswara.jpg.asset.json";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { MandalaEnter } from "@/components/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -21,8 +20,8 @@ function Home() {
     <div className="absolute inset-0 bg-midnight/45" />
     <div className="absolute inset-0 bg-gradient-to-b from-midnight/30 via-transparent to-midnight" />
     <h1 className="sr-only">aumkarra</h1>
-    <Button asChild size="lg" className="fade-up absolute bottom-12 left-1/2 h-12 -translate-x-1/2 rounded-sm eyebrow lg:hidden">
-      <Link to="/calendar">Experience the Sacred <ArrowRight /></Link>
-    </Button>
+    <div className="absolute inset-x-0 bottom-0 flex justify-center bg-midnight pb-3 lg:hidden">
+      <MandalaEnter className="inline-flex" />
+    </div>
   </section>;
 }

@@ -6,4 +6,5 @@
 - [x] Landing desktop: no centered title, button in the top-right of the header.
 - [x] Contact page: product selector + email + message enquiry form.
 - [ ] Wire the enquiry form to actually send (needs an inbox/email service).
+- [x] Update approved wording, lowercase large headings, and show the mandala on mobile/tablets; verify the latest preview.
 - [ ] Activate WhatsApp contact button — waiting for the user's number.
