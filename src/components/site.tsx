@@ -35,26 +35,7 @@ export function SiteHeader() {
           ))}
       </nav>
       {landing && (
-        <Link to="/calendar" aria-label="Experience the Sacred" className="mandala-btn group fade-up hidden lg:inline-flex">
-          <svg className="mandala-ring" viewBox="0 0 120 120" aria-hidden="true" fill="none">
-            <circle cx="60" cy="60" r="57" stroke="currentColor" strokeWidth="1" opacity="0.4" />
-            <circle cx="60" cy="60" r="50" stroke="currentColor" strokeWidth="0.75" strokeDasharray="3 5" opacity="0.65" />
-            <circle cx="60" cy="60" r="26" stroke="currentColor" strokeWidth="0.75" opacity="0.55" />
-            {Array.from({ length: 12 }).map((_, i) => (
-              <path
-                key={i}
-                d="M60 5 C65 16 65 24 60 30 C55 24 55 16 60 5 Z"
-                stroke="currentColor"
-                strokeWidth="0.9"
-                opacity="0.75"
-                transform={`rotate(${i * 30} 60 60)`}
-              />
-            ))}
-          </svg>
-          <span className="eyebrow relative text-center text-[10px] leading-relaxed text-gold transition-colors group-hover:text-ivory">
-            Experience<br />the Sacred
-          </span>
-        </Link>
+        <MandalaEnter className="hidden lg:inline-flex" />
       )}
       <Button variant="ghost" size="icon" className="text-ivory md:hidden" onClick={() => setOpen(!open)} aria-label="Menu" aria-expanded={open}>
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -71,6 +52,18 @@ export function SiteHeader() {
       )}
     </header>
   );
+}
+
+export function MandalaEnter({ className = "" }: { className?: string }) {
+  return <Link to="/calendar" aria-label="Experience the Sacred" className={`mandala-btn group fade-up ${className}`}>
+    <svg className="mandala-ring" viewBox="0 0 120 120" aria-hidden="true" fill="none">
+      <circle cx="60" cy="60" r="57" stroke="currentColor" strokeWidth="1" opacity="0.4" />
+      <circle cx="60" cy="60" r="50" stroke="currentColor" strokeWidth="0.75" strokeDasharray="3 5" opacity="0.65" />
+      <circle cx="60" cy="60" r="26" stroke="currentColor" strokeWidth="0.75" opacity="0.55" />
+      {Array.from({ length: 12 }).map((_, i) => <path key={i} d="M60 5 C65 16 65 24 60 30 C55 24 55 16 60 5 Z" stroke="currentColor" strokeWidth="0.9" opacity="0.75" transform={`rotate(${i * 30} 60 60)`} />)}
+    </svg>
+    <span className="eyebrow relative text-center text-[10px] leading-relaxed text-gold transition-colors group-hover:text-ivory">Experience<br />the Sacred</span>
+  </Link>;
 }
 
 export function SiteFooter() {
