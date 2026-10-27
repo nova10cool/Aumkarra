@@ -82,7 +82,7 @@ function Contact() {
               required
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              placeholder="How many calendars would you like? Any questions?"
+              placeholder="Your message"
               rows={4}
               className="rounded-sm bg-midnight/60"
             />

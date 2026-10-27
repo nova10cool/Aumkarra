@@ -24,8 +24,8 @@ function About() {
     <ImageScene src={shiva.url} align="left" position="center 15%">
       <p className="eyebrow text-olive">About the calendar</p>
       <h1 className="mt-5 text-5xl glow-text md:text-6xl">a rhythm for every day</h1>
-      <p className="mt-7 font-serif text-xl leading-relaxed text-ivory/85">The 2027 aumkarra calendar brings together the traditional Panchanga and devotional art. Tamil and English sit side by side, keeping the year close to its roots.</p>
-      <p className="mt-5 font-serif text-xl leading-relaxed text-ivory/75">Daily tithi and nakshatra, Rahu Kalam, Yamagandam and Gulikai accompany festivals, fasts and observances; using verified Malaysian timing throughout. Also includes Malaysian public holidays and special dates.</p>
+      <p className="mt-7 font-serif text-xl leading-relaxed text-ivory/85">The 2027 aumkarra vedic calendar brings together the traditional Panchanga and devotional art. Tamil and English sit side by side, keeping the year close to its roots.</p>
+      <p className="mt-5 font-serif text-xl leading-relaxed text-ivory/75">Daily tithi and nakshatra, Rahu Kalam, Yamagandam and Gulikai accompany festivals, fasts and observances; using verified Malaysian timing throughout the year. Also includes Malaysian public holidays and special dates.</p>
     </ImageScene>
     <section className="ethereal px-6 py-20">
       <div className="mx-auto max-w-5xl text-center">
