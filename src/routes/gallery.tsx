@@ -39,34 +39,30 @@ function Upcoming() {
       </ImageScene>
 
       <section className="overflow-hidden border-t border-border px-6 pb-24 pt-12 md:pb-32 md:pt-16">
-        <div className="mx-auto w-full max-w-5xl">
-          <p className="eyebrow text-center text-olive md:text-left">
-            Something sacred is about to rise
-          </p>
-          <div className="mt-8 grid w-full items-center gap-14 md:grid-cols-2 md:gap-20">
+        <div className="mx-auto grid w-full max-w-5xl items-center gap-14 md:grid-cols-2 md:gap-20">
+          <div className="text-center">
+            <p className="eyebrow text-olive">Something sacred is about to rise</p>
             <img
               src={vedaLife}
               alt="Veda Life agarbhati tube standing beside its cap, lit by an oil lamp"
-              className="mx-auto w-full max-w-xs md:max-w-sm"
+              className="mx-auto mt-6 w-full max-w-xs md:max-w-sm"
             />
-            <div className="ethereal text-center md:text-left">
-              <h2 className="font-display text-6xl leading-none glow-text md:text-7xl">
-                veda life
-              </h2>
-              <span className="mx-auto mt-7 block h-px w-24 bg-gradient-to-r from-transparent via-gold/70 to-transparent md:mx-0" />
-              <p className="mt-7 font-serif text-2xl leading-relaxed text-ivory/85">
-                An exquisite fragrance.
-              </p>
-              <p className="mt-5 font-serif text-lg leading-relaxed text-ivory/60">
-                Vedic sandal agarbhati, handcrafted with all-natural ingredients — for your pooja
-                room, or your desk.
-              </p>
-              <Button asChild variant="link" className="mt-8 px-0 eyebrow">
-                <Link to="/contact">
-                  Enquire <ArrowRight />
-                </Link>
-              </Button>
-            </div>
+          </div>
+          <div className="ethereal text-center md:text-left">
+            <h2 className="font-display text-6xl leading-none glow-text md:text-7xl">veda life</h2>
+            <span className="mx-auto mt-7 block h-px w-24 bg-gradient-to-r from-transparent via-gold/70 to-transparent md:mx-0" />
+            <p className="mt-7 font-serif text-2xl leading-relaxed text-ivory/85">
+              An exquisite fragrance.
+            </p>
+            <p className="mt-5 font-serif text-lg leading-relaxed text-ivory/60">
+              Vedic sandal agarbhati, handcrafted with all-natural ingredients — for your pooja room,
+              or your desk.
+            </p>
+            <Button asChild variant="link" className="mt-8 px-0 eyebrow">
+              <Link to="/contact">
+                Enquire <ArrowRight />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
