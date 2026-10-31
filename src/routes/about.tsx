@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import shiva from "@/assets/shiva-page.jpg.asset.json";
-import devi from "@/assets/devi.jpg.asset.json";
+import shiva from "@/assets/shiva-page.jpg";
+import devi from "@/assets/devi.jpg";
 import { ImageScene, Ornament } from "@/components/site";
 
 export const Route = createFileRoute("/about")({

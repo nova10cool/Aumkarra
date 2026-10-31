@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Pause, Play, RotateCcw, RotateCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import front from "@/assets/cover-page.jpg.asset.json";
-import back from "@/assets/calendar-back.jpeg.asset.json";
+import front from "@/assets/cover-page.jpg";
+import back from "@/assets/calendar-back.jpeg";
 
 export function CalendarModel() {
   const host = useRef<HTMLDivElement>(null);

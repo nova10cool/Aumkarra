@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import venkat from "@/assets/venkateswara.jpg.asset.json";
+import venkat from "@/assets/venkateswara.jpg";
 import { MandalaEnter } from "@/components/site";
 
 export const Route = createFileRoute("/")({
