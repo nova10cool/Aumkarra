@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import shiva from "@/assets/shiva-page.jpg.asset.json";
-import devi from "@/assets/devi.jpg.asset.json";
+import shiva from "@/assets/shiva-page.jpg";
+import devi from "@/assets/devi.jpg";
 import { ImageScene, Ornament } from "@/components/site";
 
 export const Route = createFileRoute("/about")({
@@ -45,7 +45,7 @@ const months = [
 function About() {
   return (
     <>
-      <ImageScene src={shiva.url} align="left" position="center 15%">
+      <ImageScene src={shiva} align="left" position="center 15%">
         <p className="eyebrow text-olive">About the calendar</p>
         <h1 className="mt-5 text-5xl glow-text md:text-6xl">a rhythm for every day</h1>
         <p className="mt-7 font-serif text-xl leading-relaxed text-ivory/85">
@@ -73,7 +73,7 @@ function About() {
           </div>
         </div>
       </section>
-      <ImageScene src={devi.url} align="left" position="70% 30%">
+      <ImageScene src={devi} align="left" position="70% 30%">
         <p className="eyebrow text-olive">Art within the pages</p>
         <h2 className="mt-5 text-4xl glow-text md:text-5xl">a moment of devotion</h2>
         <p className="mt-7 font-serif text-xl leading-relaxed text-ivory/85">

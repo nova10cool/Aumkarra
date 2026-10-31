@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Pause, Play, RotateCcw, RotateCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import front from "@/assets/cover-page.jpg.asset.json";
-import back from "@/assets/calendar-back.jpeg.asset.json";
+import front from "@/assets/cover-page.jpg";
+import back from "@/assets/calendar-back.jpeg";
 
 export function CalendarModel() {
   const host = useRef<HTMLDivElement>(null);
@@ -27,7 +27,7 @@ export function CalendarModel() {
       const camera = new THREE.PerspectiveCamera(36, 1, 0.1, 100);
       camera.position.z = 4.9;
       const loader = new THREE.TextureLoader();
-      const textures = await Promise.all([loader.loadAsync(front.url), loader.loadAsync(back.url)]);
+      const textures = await Promise.all([loader.loadAsync(front), loader.loadAsync(back)]);
       if (cancelled) { textures.forEach((t) => t.dispose()); renderer.dispose(); renderer.domElement.remove(); return; }
       textures.forEach((t) => { t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = renderer.capabilities.getMaxAnisotropy(); });
       const swatch = document.createElement("canvas").getContext("2d");
@@ -91,7 +91,7 @@ export function CalendarModel() {
   return (
     <div className="w-full">
       <div ref={host} className="calendar-stage relative mx-auto w-full overflow-hidden">
-        {!ready && <img src={front.url} alt="aumkarra 2027 calendar cover" className="absolute inset-0 m-auto h-4/5 w-4/5 object-contain" />}
+        {!ready && <img src={front} alt="aumkarra 2027 calendar cover" className="absolute inset-0 m-auto h-4/5 w-4/5 object-contain" />}
       </div>
       <div className="flex justify-center gap-3">
         <Button variant="ghost" size="icon" disabled={!ready} aria-label="Show calendar front" title="Show front" onClick={() => { rotation.current = 0; playing.current = false; setPaused(true); }}><RotateCcw /></Button>
